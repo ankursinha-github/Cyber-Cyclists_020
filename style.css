@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+/* Navbar Css */
+#navbar,
+.nav_left,
+.nav_right,
+#nav_items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navbar {
+    padding: 1rem 2rem;
+    background-color: #F7F7F8;
+}
+
+#burger_icon {
+    font-size: 1.5rem;
+    transition: 0.5s ease;
+}
+
+#burger_icon:hover {
+    cursor: pointer;
+    color: #0B8494;
+    transform: scale(1.15);
+}
+
+#nav_items .nav_item {
+    border: 1px solid #0B8494;
+    color: #0B8494;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.8rem;
+    margin-right: 0.5rem;
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+#nav_items .nav_item:hover,
+.nav_right .nav_icon:hover {
+    cursor: pointer;
+    background-color: #0B8494;
+    color: white;
+    transform: scale(1.1);
+}
+
+#nav_items .nav_item span {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 0.2rem;
+}
+
+#navbar .create_btn {
+    background-color: #0B8494;
+    color: white;
+}
+
+#navbar .nav_left img {
+    height: 4rem;
+    margin: 0 1rem;
+}
+
+#navbar .nav_left img:hover {
+    cursor: pointer;
+}
+
+#navbar .nav_right #search_bar {
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60%;
+}
+
+#navbar .nav_right #search_bar div:nth-child(1) {
+    padding: 0.5rem;
+    background-color: white;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+input[placeholder="Search"] {
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    padding: 0.6rem 0 0.4rem 0;
+    width: 90%;
+    outline: none;
+    border: none;
+}
+
+input[placeholder="Search"]::placeholder {
+    color: black;
+}
+
+.nav_right .nav_icon {
+    border: 1px solid #0B8494;
+    color: #0B8494;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.8rem;
+    margin-left: 0.5rem;
+    transition: 0.5s ease;
+}
+
+@media screen and (max-width: 1050px) {
+
+    #nav_items {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .nav_icon:nth-of-type(2),
+    .nav_icon:nth-of-type(3) {
+        display: none;
+    }
+
+    #navbar .nav_right {
+        justify-content: flex-end;
+    }
+}
