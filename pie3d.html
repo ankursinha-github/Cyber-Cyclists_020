@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overdue Pie Chart</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .Overdue-chart {
+            text-align: center;
+            width: 200px;
+        }
+
+        .pie-chart {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-left: 40px;
+            background: conic-gradient(#ff4500 0% 56%,
+                    #32cd32 56% 100%);
+            animation: pieChart 2s ease-out forwards;
+        }
+
+        .slice {
+            top: 0;
+            left: 20px;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 50%);
+        }
+
+        .chart-label {
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .no-label {
+            color: #32cd32;
+            text-align: right;
+            font-size: 20px;
+            margin-right: 20px;
+        }
+
+        .yes-label {
+            color: #ff4500;
+            text-align: left;
+            font-size: 20px;
+        }
+
+        .chart-title {
+            margin-bottom: 20px;
+            margin-left:20px;
+            font-size: 25px;
+            font-weight: bold;
+            color: #333;
+        }
+        @keyframes pieChart {
+            0% {
+                background: conic-gradient(#ff4500 0% 56%);
+            }
+
+            50% {
+                background: conic-gradient(#ff4500 0% 56%,
+                #32cd32 56% 100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Overdue-chart">
+        <div class="chart-title">
+            OVERDUE
+        </div>
+        <div class="pie-chart">
+            <div class="slice yes"></div>
+            <div class="slice no"></div>
+        </div>
+        <div class="chart-label">
+            <span class="no-label">No<br>44%</span>
+            <span class="yes-label">Yes<br>56%</span>
+        </div>
+
+    </div>
+</body>
+
+</html>

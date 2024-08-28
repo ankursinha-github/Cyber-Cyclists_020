@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Priority Count</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: #f0f0f0;
+            
+        }
+
+        .chart-container{
+            max-width: 1200px;
+            margin:auto;
+            font-family: Arial, sans-serif;
+        }
+
+        .Priority-chart {
+            text-align: center;
+        }
+
+        .circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: conic-gradient(#4CAF50 0% 100%);
+            position: relative;
+            margin: 0 auto;
+            animation: revealDonut 2s ease-out forwards;
+
+        }
+
+        .circle::before {
+            content: "";
+            width: 80px;
+            height: 80px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .circle .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: #000;
+            font-weight: bold;
+            opacity: 0;
+            animation: revealText 3s ease-out forwards;
+            animation-delay: 1s;
+        }
+
+        .legend {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 300px;
+            margin: 20px auto;
+        }
+
+        .legend div {
+            display: flex;
+            align-items: center;
+        }
+
+        .legend span {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .legend .low {
+            background-color: #4CAF50;
+        }
+
+        .legend .medium {
+            background-color: #FFEB3B;
+        }
+
+        .legend .high {
+            background-color: #FF5722;
+        }
+
+        .Overdue-chart {
+            text-align: center;
+            width: 200px;
+            margin-top: 100px;
+        }
+
+        .pie-chart {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-left: 40px;
+            background: conic-gradient(#ff4500 0% 56%,
+                    #32cd32 56% 100%);
+            animation: pieChart 2s ease-out forwards;
+        }
+
+        .slice {
+            top: 0;
+            left: 20px;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 50%);
+        }
+
+        .chart-label {
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .no-label {
+            color: #32cd32;
+            text-align: right;
+            font-size: 20px;
+            margin-right: 20px;
+        }
+
+        .yes-label {
+            color: #ff4500;
+            text-align: left;
+            font-size: 20px;
+        }
+
+        .chart-title {
+            margin-bottom: 20px;
+            margin-left: 20px;
+            font-size: 25px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .Bar-chart {
+            width: 500px;
+            padding-bottom: 100px;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+        }
+
+        .chart-heading {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 550;
+            margin-bottom: 10px;
+        }
+
+        .chart {
+            display: flex;
+            align-items: flex-end;
+            border-left: 2px solid #000;
+            border-bottom: 2px solid #000;
+            padding-left: 20px;
+        }
+
+        .y-axis-labels {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 400px;
+            padding-right: 10px;
+            padding-bottom: 20px;
+        }
+
+        .y-axis-labels div {
+            font-size: 15px;
+            font-weight: 550;
+        }
+
+        .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            gap: 20px;
+        }
+
+        .bar-group {
+            text-align: center;
+        }
+
+        .bar {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 400px;
+            width: 70px;
+        }
+
+        .x-axis {
+            background-color: #4CAF50;
+            width: 70px;
+            animation: grow 5s forwards;
+        }
+
+        .bar-label {
+            margin-top: 5px;
+            font-size: 18px;
+            font-weight: 550;
+
+        }
+
+        @keyframes pieChart {
+            0% {
+                background: conic-gradient(#ff4500 0% 56%);
+            }
+
+            50% {
+                background: conic-gradient(#ff4500 0% 56%,
+                        #32cd32 56% 100%);
+            }
+        }
+
+        @keyframes revealDonut {
+            0% {
+                background: conic-gradient(#4CAF50 0% 36%);
+            }
+
+            50% {
+                background: conic-gradient(#4CAF50 0% 36%,
+                        #FFEB3B 36% 100%);
+            }
+
+            100% {
+                background: conic-gradient(#4CAF50 0% 36%,
+                        #FFEB3B 36% 64%,
+                        #FF5722 64% 100%);
+            }
+        }
+
+        @keyframes revealText {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes grow {
+            0% {
+                height: 0;
+            }
+
+            100% {
+                height: var(--height);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chart-container">
+        <div class="Priority-chart">
+            <h1>Task Priority Count</h1>
+            <div class="circle">
+                <div class="text">50</div>
+            </div>
+            <div class="legend">
+                <div><span class="low"></span>Low</div>
+                <div><span class="medium"></span>Medium</div>
+                <div><span class="high"></span>High</div>
+            </div>
+        </div>
+        <div class="Overdue-chart">
+            <div class="chart-title">
+                OVERDUE
+            </div>
+            <div class="pie-chart">
+                <div class="slice yes"></div>
+                <div class="slice no"></div>
+            </div>
+            <div class="chart-label">
+                <span class="no-label">No<br>44%</span>
+                <span class="yes-label">Yes<br>56%</span>
+            </div>
+
+        </div>
+        <div class="Bar-chart">
+            <div class="chart-heading">Task Count Assigned to</div>
+            <div class="chart">
+                <div class="y-axis-labels">
+                    <div>16</div>
+                    <div>14</div>
+                    <div>12</div>
+                    <div>10</div>
+                    <div>8</div>
+                    <div>6</div>
+                    <div>4</div>
+                    <div>2</div>
+                    <div>0</div>
+                </div>
+                <div class="bar-chart">
+                    <div class="bar-group">
+                        <div class="bar">
+                            <div class="x-axis" style="--height: 370px;"></div>
+                        </div>
+                        <div class="bar-label">Ankur</div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bar">
+                            <div class="x-axis" style="--height: 320px;"></div>
+                        </div>
+                        <div class="bar-label">Pragya</div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bar">
+                            <div class="x-axis" style="--height: 260px;"></div>
+                        </div>
+                        <div class="bar-label">Shweta</div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bar">
+                            <div class="x-axis" style="--height: 240px;"></div>
+                        </div>
+                        <div class="bar-label">Alice</div>
+                    </div>
+                    <div class="bar-group">
+                        <div class="bar">
+                            <div class="x-axis" style="--height: 280px;"></div>
+                        </div>
+                        <div class="bar-label">Bob</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
