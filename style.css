@@ -20,6 +20,7 @@ body {
 #navbar {
     padding: 1rem 2rem;
     background-color: #F7F7F8;
+    height: 12vh;
 }
 
 #burger_icon i {
@@ -111,25 +112,23 @@ input[placeholder="Search"]::placeholder {
     transition: 0.5s ease;
 }
 
+#content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 83vh;
+}
+
 /* Sidebar */
+aside {
+    width: 20%;
+    height: 100%;
+}
+
 #sidebar {
-    border: 1px solid black;
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
-    width: 300px;
-    height: 90%;
-    position: fixed;
-    top: 15%;
-    left: -320px;
-    transition: all 0.3s linear;
-}
-
-#check {
-    display: none;
-}
-
-#check:checked ~ #sidebar {
-    left: 0;
+    border-right: 1px solid gray;
+    height: 100%;
+    overflow-y: scroll;
 }
 
 #sidebar #side_header {
@@ -142,6 +141,7 @@ input[placeholder="Search"]::placeholder {
     height: 3rem;
     width: 3rem;
     border-radius: 50%;
+    margin: 0 0.5rem 0 1rem;
 }
 
 #sidebar .sidebar_subtitle {
@@ -178,6 +178,10 @@ input[placeholder="Search"]::placeholder {
 /* Media Query for Responsiveness */
 @media screen and (max-width: 1050px) {
     #nav_items {
+        display: none;
+    }
+
+    #sidebar {
         display: none;
     }
 }
