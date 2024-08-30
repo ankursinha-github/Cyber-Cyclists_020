@@ -422,6 +422,88 @@ td img {
     font-size: 12px;
 }
 
+.heading{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+.kanban-board {
+    display: flex;
+    gap: 40px;
+    padding: 15px;
+}
+
+.kanban-column {
+    background: linear-gradient(270deg, #86e9eb 0%, #95eb95 100%);
+    padding: 15px;
+    width: 30%;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.kanban-column h2 {
+    margin-top: 0;
+    font-size: 25px;
+    text-align: center;
+    color: #000000;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+}
+
+.kanban-item {
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.kanban-item h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #274058;
+}
+
+.kanban-item p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #6e7a7b;
+}
+
+.kanban-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.kanban-item::before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 100%;
+    background-color: #1abc9c;
+    border-radius: 12px 0 0 12px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.kanban-column:nth-child(1) .kanban-item::before {
+    background-color: #3498db;
+}
+
+.kanban-column:nth-child(2) .kanban-item::before {
+    background-color: #f39c12;
+}
+
+.kanban-column:nth-child(3) .kanban-item::before {
+    background-color: #2ecc71;
+}
+
+
 @media (max-width: 480px) {
     .footer-link ul {
         display: flex;
