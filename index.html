@@ -28,6 +28,9 @@
 <body>
     <!-- Navbar -->
 
+    <!-- Dashboard -->
+    <!-- Footer -->
+
     <nav>
         <div id="navbar">
             <div class="nav_left">
@@ -105,6 +108,161 @@
 
         <main>
 
+            <div class="chart-container">
+                <div class="upper-part">
+                    <div class="Bar-chart">
+                        <div class="chart-heading">Task Count Assigned to</div>
+                        <div class="chart">
+                            <div class="y-axis-labels">
+                                <div>16</div>
+                                <div>14</div>
+                                <div>12</div>
+                                <div>10</div>
+                                <div>8</div>
+                                <div>6</div>
+                                <div>4</div>
+                                <div>2</div>
+                                <div>0</div>
+                            </div>
+                            <div class="bar-chart">
+                                <div class="bar-group">
+                                    <div class="bar">
+                                        <div class="x-axis" style="--height: 370px; background: linear-gradient(to top,#80B3FF, #687EFF);
+                                        "></div>
+                                    </div>
+                                    <div class="bar-label">Ankur</div>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar">
+                                        <div class="x-axis" style="--height: 320px;background: linear-gradient(to top,#80B3FF, #687EFF);"></div>
+                                    </div>
+                                    <div class="bar-label">Pragya</div>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar">
+                                        <div class="x-axis" style="--height: 260px;background: linear-gradient(to top,#80B3FF, #687EFF);"></div>
+                                    </div>
+                                    <div class="bar-label">Shweta</div>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar">
+                                        <div class="x-axis" style="--height: 240px;background: linear-gradient(to top,#80B3FF, #687EFF);"></div>
+                                    </div>
+                                    <div class="bar-label">Alice</div>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar">
+                                        <div class="x-axis" style="--height: 280px;background: linear-gradient(to top,#80B3FF, #687EFF);"></div>
+                                    </div>
+                                    <div class="bar-label">Bob</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Overdue-chart">
+                        <div class="chart-title">
+                            OVERDUE
+                        </div>
+                        <div class="pie-chart">
+                            <div class="slice yes"></div>
+                            <div class="slice no"></div>
+                        </div>
+                        <div class="chart-label">
+                            <span class="no-label">No<br>44%</span>
+                            <span class="yes-label">Yes<br>56%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lower-part">
+                    <div class="Priority-chart">
+                        <h1>Task Priority Count</h1>
+                        <div class="circle">
+                            <div class="text">50</div>
+                        </div>
+                        <div class="legend">
+                            <div><span class="low"></span>Low</div>
+                            <div><span class="medium"></span>Medium</div>
+                            <div><span class="high"></span>High</div>
+                        </div>
+                    </div>
+                    <div class="line-container">
+                    <div class="heading">Task Status Count and % Age</div>
+        
+        
+                    <div class="line-part">
+                        <canvas id="lineChart" width="500" height="300"></canvas>
+        
+                        <!-- Y-axis labels -->
+                        <div class="y-labels">
+                            <div>40%</div>
+                            <div>35%</div>
+                            <div>30%</div>
+                            <div>25%</div>
+                            <div>20%</div>
+                            <div>15%</div>
+                            <div>10%</div>
+                            <div>5%</div>
+                            <div>0%</div>
+                        </div>
+        
+                        <!-- X-axis labels -->
+                        <div class="x-labels">
+                            <div>Not Started Yet</div>
+                            <div>Open</div>
+                            <div>In Progress</div>
+                            <div>Testing</div>
+                            <div>Completed</div>
+                        </div>
+                    </div>
+                </div>
+        
+                <script>
+                    const canvas = document.getElementById('lineChart');
+                    const ctx = canvas.getContext('2d');
+        
+                    // Adjusted y positions for data points to match y-axis labels
+                    const dataPoints = [
+                        { x: 50, y: 160, percentage: "18%" }, // 18%
+                        { x: 150, y: 170, percentage: "16%" }, // 16%
+                        { x: 250, y: 170, percentage: "16%" }, // 16%
+                        { x: 350, y: 180, percentage: "14%" }, // 14%
+                        { x: 450, y: 120, percentage: "36%" }  // 36%
+                    ];
+        
+                    // Function to draw the line chart
+                    function drawLineChart(ctx, dataPoints) {
+                        // Draw the line connecting data points
+                        ctx.beginPath();
+                        ctx.moveTo(dataPoints[0].x, dataPoints[0].y); // Start from the first point
+        
+                        for (let i = 1; i < dataPoints.length; i++) {
+                            ctx.lineTo(dataPoints[i].x, dataPoints[i].y); // Draw lines to subsequent points
+                        }
+        
+                        ctx.strokeStyle = '#687EFF'; // Line color (orange)
+                        ctx.lineWidth = 3; // Line width
+                        ctx.stroke(); // Draw the line
+        
+                        // Draw points and percentages
+                        ctx.fillStyle = '#687EFF'; // Point color (orange)
+                        ctx.font = "14px Arial";
+                        ctx.textAlign = "center";
+                        ctx.textBaseline = "bottom";
+        
+                        dataPoints.forEach(point => {
+                            ctx.beginPath();
+                            ctx.arc(point.x, point.y, 5, 0, Math.PI * 2, true); // Draw each point
+                            ctx.fill();
+                            ctx.fillText(point.percentage, point.x, point.y - 10); // Draw the percentage above each point
+                        });
+                    }
+        
+                    // Draw the chart
+                    drawLineChart(ctx, dataPoints);
+                </script>
+            </div>
+        
+            </div>
             <div id="create_task">
                 <div class="line_row">
                     <h2>Create issue</h2>
