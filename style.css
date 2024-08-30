@@ -206,89 +206,67 @@ main {
     font-weight: 500;
 }
 
-/* General Styles */
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    /* background-color: #f5f5f5; */
-}
-
 .footer-content {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+    padding: 2rem;
     display:flex;
     justify-content: flex-start;
-    gap: 200px;
     background-color:rgb(246, 243, 243);
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
     align-items: flex-start;
     flex-wrap: wrap;
 }
 
-.logo {
-    float: left;
-    margin-left: 25px;
-    line-height: 50px;
-    font-size: 20px;
-}
-.logo img{
-    height: 50px;
-    
-}
-.logo li{
-    list-style-type: none;
-    
+.footer-content img {
+    height: 6rem;
 }
 
-.logo li a{
-    text-decoration: none;
-    font-size: large;
-    font-weight: 700;
-    color: black;
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin: auto;
 }
-.logo li a:hover{
-    text-decoration: underline;
-    color: blue;
+
+.d1 ul {
+    padding: 0;
 }
-.d1{
-    
-    font-size: 20px;
+
+.d1 h1 {
+    font-size: 1.2rem;
 }
-.d1 h1{
-    padding-left: 40px;
-    font-size: large;
-}
-.d1 li{
+.d1 li {
+    font-size: 1rem;
     list-style-type: none;
-    line-height: 50px;
+    line-height: 2rem;
+    transition: 0.5s ease;
+}
+
+.d1 li:hover{
+    color: rgb(68, 66, 66);
+    transform: scale(1.1);
 }
 
 .d1 a{
-    /* text-align: center */
     text-decoration: none;
     color: black;
-}
-
-.d1 li a:hover{
-    color:rgb(0, 0, 235);
-    text-decoration: underline;
 }
 
 /* Footer Styles */
 footer .container {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
+    padding: 0 2rem;
     background-color:white;
-    /* text-align: center; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
+
+.container img {
+    width: 4rem;
+    margin-left: 8rem;
+}
+
 .footer-link{
     display: flex;
     gap: 50px;

@@ -1,11 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task Bridge</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="listtask.css" />
+  </head>
+  <body>
+    <div class="list_container">
+    <h2>List</h2>
+    <div id="list_bar">
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search..." />
+      <button class="search-button">Search</button>
+    </div>
+    <div class="list_item">
+        <div><span style="padding: 10px;"><i class="fa-solid fa-share-nodes fa-2xs" style="color: black;"></i></span>Share </div>
+        <div><span style="padding: 10px;"><i class="fa-solid fa-filter fa-2xs" style="color: black;"></i></span>Filter</div>
+        <div><span style="padding: 10px;"><i class="fa-solid fa-layer-group fa-2xs" style="color: black;"></i></span>Group </div>
+        <div>More</div>
+    </div>
+</div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th># Key</th>
+          <th><span style="padding: 5px;"><i class="fa-solid fa-list fa-2xs" style="color: black;"></i></span>Summary</th>
+          <th><span style="padding: 5px;"><i class="fa-solid fa-circle-arrow-right fa-2xs" style="color: black;"></i></span>Status</th>
+          <th><span style="padding: 5px;"></span>Sprint -</th>
+          <th><span style="padding: 5px;"><i class="fa-solid fa-at fa-2xs" style="color: black;"></i></span>Assignee</th>
+          <th><span style="padding: 5px;"><i class="fa-regular fa-calendar-days fa-2xs" style="color: black;"></i></span>Due date</th>
+          <th><span style="padding: 5px;"><i class="fa-regular fa-calendar-days fa-2xs" style="color: black;"></i></span>Created</th>
+          <th><span style="padding: 5px;"><i class="fa-regular fa-calendar-days fa-2xs" style="color: black;"></i></span>Updated</th>
+          <th><span style="padding: 5px;"><i class="fa-solid fa-at fa-2xs" style="color: black;"></i></span>Reporter</th>
+          <th><span style="padding: 5px;"></span>Parent</th>
+          <th><span style="padding: 5px;"><i class="fa-solid fa-code-branch fa-2xs" style="color: black;"></i></span>Development</th>
+        </tr>    </thead>
+      <tbody>
+        <tr>
+          <td>*</td>
+          <td>DM-37</td>
+          <td>Nav bar, Create page and merging files to deploy</td>
+          <td class="status">IN PROGRESS</td>
+          <td>Sprint - 1</td>
+          <td><img src="images\Ankur_Sinha_profile.png" alt="@AS">Ankur Sinha</td>
+          <td class="due">Aug 26, 2024</td>
+          <td>Aug 26, 2024</td>
+          <td>Aug 26, 2024</td>
+          <td>Debobrota</td>
+          <td style="color: rgb(207, 201, 201);">Frontend Key</td>
+          <td>Review</td>
+         
+        </tr>  
+       
+
+        
+        <tr>
+          <td>*</td>
+          <td>DM-14</td>
+          <td>Created Homepage, graph view , login & signup page</td>
+          <td class="status">READY FOR UAT</td>
+          <td>Sprint - 2</td>
+          <td><img src="images\Shweta_Patil_profile.png" alt="@SP">Shweta Patil</td>
+          <td class="due">Aug 26, 2024</td>
+          <td>Aug 26, 2024</td>
+          <td>Aug 26, 2024</td>
+          <td>Debobrota</td>
+          <td style="color: rgb(207, 201, 201);">Frontend Key</td>
+          <td>Review</td>
+          
+        </tr>
+        
+        <tr>
+          <td>*</td>
+          <td>DM-1</td>
+          <td>Footer bar,List view,kanban view for project</td>
+          <td class="status">TODO</td>
+          <td>Sprint - 3</td>
+          <td><img src="images\Pragya_Gupta_profile.png" alt="@PG">Pragya Gupta</td>
+          <td class="due">Aug 9, 2023</td>
+          <td>Aug 26, 2024</td>
+          <td>Aug 26, 2024</td>
+          <td>Debobrota</td>
+          <td style="color: rgb(207, 201, 201);">Frontend Key</td>
+          <td>Review</td>
+        </tr>
+        
+        <tr>
+          <td>*</td>
+          <td>DM-36</td>
+          <td>Testing</td>
+          <td class="status">BACKLOG</td>
+          <td>Sprint - 4</td>
+          <td>Team</td>
+          <td class="due">Aug 26, 2024</td>
+          <td>Aug 26, 2024</td>
+          <td>Aug 26, 2024</td>
+          <td>Debobrota</td>
+          <td style="color: rgb(207, 201, 201);">Frontend Key</td>
+          <td>Merge</td>
+       
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/8e2a4fca49.js"
+    crossorigin="anonymous"
+  ></script>
 </html>
