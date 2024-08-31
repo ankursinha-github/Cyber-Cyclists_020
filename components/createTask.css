@@ -368,6 +368,10 @@ footer a {
     .list_item {
         display: none;
     }
+
+    #create_task {
+        padding: 1rem;
+    }
 }
 
 @media screen and (max-width: 450px) {
