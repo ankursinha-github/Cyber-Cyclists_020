@@ -7,18 +7,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="../images/TB_Logo.png">
-    <title>Kanban Board</title>
-    <link rel="stylesheet" href="kanban.css" />
-</head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Font awesome link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            rel="stylesheet">
+        <link rel="icon" href="images/TB_Logo.png">
+        <title>Cyber Cyclists 020</title>
+        <link rel="stylesheet" href="createTask.css" />
+    </head>
 
 <body>
-    <!-- Navbar -->
     <nav>
         <div id="navbar">
             <div class="nav_left">
                 <div id="burger_icon"><i class="fa-solid fa-bars"></i></div>
-                <a href="../index.html"><img src="../images/TB_Logo.png" alt="Website Logo" /></a>
+                <img src="../images/TB_Logo.png" alt="Website Logo" />
                 <div id="nav_items">
                     <div class="nav_item">
                         Your work <span><i class="fa-solid fa-chevron-down"></i></span>
@@ -26,12 +38,10 @@
                     <div class="nav_item">
                         Projects <span><i class="fa-solid fa-chevron-down"></i></span>
                     </div>
-                    <div class="nav_item">
-                        <a href="./homepage.html">Dashboards <span><i class="fa-solid fa-chevron-down"></i></span></a>
-                    </div>
-                    <a href="./createTask.html">
-                        <div class="nav_item create_btn">Create</div>
-                    </a>
+                    <a href="./homepage.html"><div class="nav_item">
+                        Dashboards <span><i class="fa-solid fa-chevron-down"></i></span>
+                    </div></a>
+                    <div class="nav_item create_btn">Create</div>
                 </div>
             </div>
             <div class="nav_right">
@@ -47,12 +57,12 @@
     </nav>
 
     <!-- Dashboard -->
+
     <div id="content">
-        <!-- aside bar  -->
         <aside>
             <div id="sidebar">
                 <div id="side_header">
-                    <img src="../images/profile_img.jpg" alt="profile_img" />
+                    <img src="../images/profile_img.jpg" alt="profile_img">
                     <div class="header_text">
                         <div class="sidebar_title">My Kanban Project</div>
                         <div class="sidebar_subtitle">Software Project</div>
@@ -65,10 +75,12 @@
                             <span><i class="fa-solid fa-bars-staggered"></i></span>
                             <span>Timeline</span>
                         </div>
-                        <div class="sidebar_item">
-                            <span><i class="fa-solid fa-chess-board"></i></span>
-                            <span>Board</span>
-                        </div>
+                        <a href="./kanban.html">
+                            <div class="sidebar_item">
+                                <span><i class="fa-solid fa-chess-board"></i></span>
+                                <span>Board</span>
+                            </div>
+                        </a>
                         <a href="ListPage.html">
                             <div class="sidebar_item">
                                 <span><i class="fa-solid fa-list"></i></span>
@@ -94,45 +106,48 @@
         </aside>
 
         <main>
-            <!-- kanban view -->
-            <h1 class="heading">Kanban Board</h1>
-            <div class="kanban-board">
-                <div class="kanban-column">
-                    <h2>To Do</h2>
-                    <div class="kanban-item">
-                        <h3>Update Readme File</h3>
-                        <p>Prepare the application feature and code file.</p>
-                    </div>
-                </div>
 
-                <div class="kanban-column">
-                    <h2>In Progress</h2>
-                    <div class="kanban-item">
-                        <h3>Team Meeting</h3>
-                        <p>Conduct the weekly sprint planning meeting.</p>
-                    </div>
-                    <div class="kanban-item">
-                        <h3>Fix Bug #1234</h3>
-                        <p>Resolve the code bug .</p>
-                    </div>
+            <div id="create_task">
+                <div class="line_row">
+                    <h2>Create issue</h2>
+                    <button>Add Task</button>
                 </div>
-
-                <div class="kanban-column">
-                    <h2>Done</h2>
-                    <div class="kanban-item">
-                        <h3>Design Homepage</h3>
-                        <p>Finalize the homepage design layout.</p>
+                <div id="inputs">
+                    <div class="input_box">
+                        <label for="project"><span><i class="fa-solid fa-diagram-project"></i></span>Project</label>
+                        <input type="text" placeholder="Project Name">
                     </div>
-                    <div class="kanban-item">
-                        <h3>Design Dashboard</h3>
-                        <p>Finalize the main layout of dashboard.</p>
+                    <div class="input_box">
+                        <label for="issue_type"><span><i class="fa-solid fa-triangle-exclamation"></i></span>Issue
+                            Type</label>
+                        <input type="text" placeholder="Issue Type">
+                    </div>
+                    <div class="input_box">
+                        <label for="status"><span><i class="fa-solid fa-check"></i></span>Status</label>
+                        <select name="status" id="status">
+                            <option value="none">Select status</option>
+                            <option value="complete">Completed</option>
+                            <option value="pending">Pending</option>
+                        </select>
+                    </div>
+                    <div class="input_box">
+                        <label for="summary"><span><i class="fa-regular fa-message"></i></span>Summary</label>
+                        <textarea name="summary" id="summary" placeholder="Give a brief info of your task"></textarea>
+                    </div>
+                    <div class="input_box">
+                        <label for="desc"><span><i class="fa-solid fa-quote-left"></i></span>Description</label>
+                        <textarea name="desc" id="desc" placeholder="Describe your task"></textarea>
+                    </div>
+                    <div class="input_box">
+                        <label for="assignee"><span><i class="fa-solid fa-user"></i></span>Assignee</label>
+                        <input type="text" placeholder="Assignee">
                     </div>
                 </div>
             </div>
         </main>
     </div>
 
-    <!-- Footer Section-->
+    <!-- Footer Section -->
     <section class="container">
         <img src="../images/TB_Logo.png" alt="TB Logo" />
         <div class="row">
@@ -182,7 +197,7 @@
             </div>
         </div>
     </section>
-    <!-- footer  -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <p>Copyright © 2024 Masai</p>
@@ -209,6 +224,7 @@
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>
