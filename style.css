@@ -5,32 +5,34 @@
 }
 
 body{
-    margin:0px;
-    padding:0px;
     background-color: rgb(231, 244, 252);
     font-family: "Open Sans", sans-serif;
 }
 
 .landing-container{
-    max-width: 1300px;
     margin:auto;
 }
 
 header{
-    display:flex;
-    justify-content: space-around;
     background: linear-gradient(to right, #627cfa, #690bb6);
     color:rgb(252, 238, 238);
     text-align: center;
+    padding: 1rem;
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 0.5;
 }
 
 header img{
-    width:7%;
-    height:10%;
+    width: 4rem;
 }
 
 header h1{
-    font-size:50px;
+    font-size: 3rem;
     font-weight: 700;
     color: rgb(11, 211, 211);
     text-align: center;
@@ -39,16 +41,14 @@ header h1{
    
 }
 header button{
-    width:12%;
     height:12%;
-    margin-top:2%;
-    padding:1%;
+    padding: 0.5rem 1rem;
     border:none;
     border-radius: 15px;
     background-color: rgb(255, 255, 255);
     color:black;
     font-weight: bold;
-    font-size:15px;
+    font-size: 1rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 header button a {
@@ -63,8 +63,6 @@ header button:hover{
 .intro{
     display:flex;
     justify-content: space-around;
-    margin-top:100px;
-    margin-bottom:150px;
 }
 
 .intro p{
@@ -79,29 +77,22 @@ header button:hover{
 }
 .features{
     width:80%;
-    margin-top:100px;
     text-align:center;
-    margin-bottom:100px;
-    margin-left:10%
+    margin: 1rem auto;
 }
 
 .features h2{
     font-weight: bolder;
     font-size:40px;
-    
 }
 
 .choose-cards{
     display:flex;
-    justify-content: space-around;
-    height: 100%;
-    padding:15px;
+    justify-content: space-between;
 }
 
 .single-cards{
-    padding:10px;
-    /* margin-top:20px; */
-    width:30%;
+    margin: 1rem;
     height: 100%;
     border-radius:10px;
     background: linear-gradient(to right, #627cfa, #690bb6);
@@ -126,10 +117,9 @@ header button:hover{
 .single-key{
     display:flex;
     justify-content: space-around;
-    margin:50px;
-    margin-top:100px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     text-align:center;
+    margin: 5rem 1rem;
 }
 
 .single-key h3{
@@ -145,8 +135,7 @@ header button:hover{
 .testimonials  {
     width:80%;
     padding: 15px;
-    margin: 150px 100px;
-    
+    margin: auto;
 }
 
 .testimonials h2{
@@ -159,9 +148,8 @@ header button:hover{
     justify-content: space-around;
 }
 .reviews p{
-    text-align: start;
-    width:80%;
-    font-weight: 530;
+    font-weight: 500;
+    margin: 1rem;
 }
 
 .foot {
@@ -182,6 +170,12 @@ header button:hover{
     text-align: center;
 }
 
+.our-team > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 .our-team h2 {
     font-size: 2.5em;
     color: #333;
@@ -190,8 +184,7 @@ header button:hover{
 
 .team-member {
     display: inline-block;
-    width: 250px;
-    margin: 20px;
+    margin: 1.5rem;
     text-align: center;
     vertical-align: top;
 }
@@ -241,4 +234,14 @@ footer .button {
 footer .button:hover {
     background-color: #263841;
     color: rgb(228, 226, 226);
+}
+
+@media screen and (max-width: 700px) {
+    .intro, .single-key, .review-container, .choose-cards, .our-team > div {
+        flex-direction: column;
+    }
+
+    .single-key img{
+        width: 100%;
+    }
 }
