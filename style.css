@@ -4,162 +4,187 @@
     font-weight: 500;
 }
 
-body{
+body {
+    margin: 0;
+    padding: 0;
     background-color: rgb(231, 244, 252);
     font-family: "Open Sans", sans-serif;
 }
 
-.landing-container{
-    margin:auto;
+.landing-container {
+    max-width: 1300px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 0 20px;
 }
 
-header{
-    background: linear-gradient(to right, #627cfa, #690bb6);
-    color:rgb(252, 238, 238);
-    text-align: center;
-    padding: 1rem;
-}
-
-header div {
+header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    line-height: 0.5;
+    justify-content: space-around;
+    background: linear-gradient(to right, #627cfa, #690bb6);
+    color: rgb(252, 238, 238);
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 10px;
 }
 
-header img{
-    width: 4rem;
+header img {
+    width: 7%;
+    height: auto;
 }
 
-header h1{
-    font-size: 3rem;
+header h1 {
+    font-size: 40px;
     font-weight: 700;
     color: rgb(11, 211, 211);
-    text-align: center;
-    padding:0px;
-    margin-top:10px;
-   
-}
-header button{
-    height:12%;
-    padding: 0.5rem 1rem;
-    border:none;
-    border-radius: 15px;
-    background-color: rgb(255, 255, 255);
-    color:black;
-    font-weight: bold;
-    font-size: 1rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-}
-header button a {
-    text-decoration: none;
-    color: black; 
+    margin: 0;
 }
 
-header button:hover{
+header button {
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+header button a {
+    text-decoration: none;
+    color: black;
+}
+
+header button:hover {
     background-color: rgb(199, 148, 246);
 }
 
-.intro{
-    display:flex;
+/* Intro Section */
+.intro {
+    display: flex;
     justify-content: space-around;
+    align-items: center;
+    margin: 100px 0;
+    flex-wrap: wrap;
 }
 
-.intro p{
+.intro p {
     text-align: center;
-    font-size:30px;
+    font-size: 24px;
     font-weight: 550;
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
-.intro img{
-    width:70%;
-}
-.features{
-    width:80%;
-    text-align:center;
-    margin: 1rem auto;
+.intro img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 20px 0;
 }
 
-.features h2{
+/* Features Section */
+.features {
+    width: 80%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.features h2 {
     font-weight: bolder;
-    font-size:40px;
+    font-size: 36px;
 }
 
-.choose-cards{
-    display:flex;
-    justify-content: space-between;
+.choose-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 15px;
 }
 
-.single-cards{
-    margin: 1rem;
-    height: 100%;
-    border-radius:10px;
+.single-cards {
+    padding: 10px;
+    width: 30%;
+    margin-bottom: 20px;
+    border-radius: 10px;
     background: linear-gradient(to right, #627cfa, #690bb6);
 }
 
-.single-cards h3{
+.single-cards h3 {
     font-size: 22px;
-    color:rgb(143, 215, 252)
+    color: rgb(143, 215, 252);
 }
 
-.single-cards p{
-    color:rgb(219, 206, 206);
+.single-cards p {
+    color: rgb(219, 206, 206);
     font-size: 15px;
 }
 
-.key-features h1{
-    font-size: 50px;
+/* Key Features Section */
+.key-features h1 {
+    font-size: 36px;
     text-align: center;
-    margin-top:150px;
-   
+    margin-top: 50px;
 }
-.single-key{
-    display:flex;
+
+.single-key {
+    display: flex;
     justify-content: space-around;
+    align-items: center;
+    margin: 50px 0;
+    flex-wrap: wrap;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-    text-align:center;
-    margin: 5rem 1rem;
-}
-
-.single-key h3{
-    padding-top:40px;
-    font-size:45px;
-
-}
-.single-key img{
-    width:60%;
-    height:400px;
-}
-
-.testimonials  {
-    width:80%;
-    padding: 15px;
-    margin: auto;
-}
-
-.testimonials h2{
     text-align: center;
-    font-size: 40px;
-    margin-bottom:50px;
 }
-.review-container{
-    display:flex;
+
+.single-key h3 {
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+.single-key img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 20px 0;
+}
+
+/* Testimonials Section */
+.testimonials {
+    width: 80%;
+    margin: 150px auto;
+    padding: 15px;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.review-container {
+    display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
-.reviews p{
-    font-weight: 500;
-    margin: 1rem;
+
+.reviews p {
+    text-align: start;
+    width: 100%;
+    max-width: 300px;
+    font-weight: 530;
+    margin: 20px;
 }
 
 .foot {
     text-align: center;
     font-size: 12px;
     color: #525252;
-    margin-left:100px;
-    margin-bottom:25px;
 }
 
+/* Our Team Section */
 .our-team {
     padding: 40px 20px;
     margin: 40px auto;
@@ -170,12 +195,6 @@ header button:hover{
     text-align: center;
 }
 
-.our-team > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
 .our-team h2 {
     font-size: 2.5em;
     color: #333;
@@ -184,7 +203,8 @@ header button:hover{
 
 .team-member {
     display: inline-block;
-    margin: 1.5rem;
+    width: 250px;
+    margin: 20px;
     text-align: center;
     vertical-align: top;
 }
@@ -214,6 +234,7 @@ header button:hover{
     color: #333;
 }
 
+/* Footer Section */
 .footer-end {
     text-align: center;
     padding: 20px;
@@ -236,12 +257,128 @@ footer .button:hover {
     color: rgb(228, 226, 226);
 }
 
-@media screen and (max-width: 700px) {
-    .intro, .single-key, .review-container, .choose-cards, .our-team > div {
+/* Media Queries */
+
+/* Tablet View */
+@media (max-width: 768px) {
+    header button{
+        display: none;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    header img {
+        width: 10%;
+    }
+
+    .intro p {
+        font-size: 20px;
+    }
+
+    .features h2 {
+        font-size: 28px;
+    }
+
+    .single-cards {
+        width: 45%;
+    }
+
+    .single-key h3 {
+        font-size: 24px;
+    }
+
+    .single-key img {
+        max-width: 300px;
+    }
+
+    .testimonials h2 {
+        font-size: 28px;
+    }
+
+    .reviews p {
+        width: 100%;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+    header button{
+        display: none;
+    }
+
+    header {
+        /* flex-direction: column; */
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header img {
+        width: 15%;
+    }
+
+    .intro {
+        flex-direction: column;
+        margin: 50px 0;
+    }
+
+    .intro p {
+        font-size: 18px;
+    }
+
+    .intro img {
+        width: 90%;
+    }
+
+    .choose-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .single-cards {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .single-key {
         flex-direction: column;
     }
 
-    .single-key img{
-        width: 100%;
+    .single-key h3 {
+        font-size: 20px;
+    }
+
+    .single-key img {
+        max-width: 90%;
+    }
+
+    .testimonials h2 {
+        font-size: 24px;
+    }
+
+    .review-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reviews p {
+        max-width: 90%;
+    }
+
+    .our-team h2 {
+        font-size: 24px;
+    }
+
+    .team-member {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .team-member h3 {
+        font-size: 1.2em;
     }
 }
