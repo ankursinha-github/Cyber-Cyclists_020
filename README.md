@@ -42,7 +42,6 @@ Cyber-Cyclists_020
 │  ├─ README.md
 │  ├─ style.css
 
-
 ## Video Walkthrough of the project
 Presentation video link : https://youtu.be/LOHxH6MNoQI?si=irSDEISNAHD9_gHE
 
@@ -68,15 +67,14 @@ List of key features of our application are-
 ## Usage
 Provide instructions and examples on how to use your project.
 
-bash
+```bash
  -> Go to the Homepage with the given link. 
  -> Tap on Login Button .
  -> Enter required field on login page.
  -> Land directly Kanban view section .
  -> Create or assign new task with required details .
- -> View or track your task with different view sections such as graph view on DashBoard, List view and kanban view.
-
-
+ -> View or track your task with different view .sections such as graph view on DashBoard, List view and kanban view.
+```
 
 ## Technology Stack
 List and provide a brief overview of the technologies used in the project.
