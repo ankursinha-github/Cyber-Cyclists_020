@@ -308,13 +308,13 @@ th {
 
 .img_box {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
 td img {
     width: 2rem;
+    margin-right: 0.5rem;
 }
 
 .due {
