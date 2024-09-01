@@ -4,13 +4,17 @@ Construct Week Project Using HTML and CSS
 TASK BRIDGE
 
 ## Introduction
-Our project is designed to create a streamlined task management tool for tech startups, replicating key features of Jira. This tool offers multiple views—List, Kanban, Calendar, and Graph—allowing teams to efficiently create, assign, and track tasks. The goal is to simplify task management, enhance collaboration, and improve productivity by providing an intuitive, responsive interface tailored to the needs of agile teams.
+Our project is designed to create a streamlined task management tool for tech startups, replicating 
+key features of Jira. This tool offers multiple views—List, Kanban, Calendar, and Graph—allowing teams 
+to efficiently create, assign, and track tasks. The goal is to simplify task management, enhance collaboration, 
+and improve productivity by providing an intuitive, responsive interface tailored to the needs of agile teams.
+
 
 ## Project Type
 Frontend 
 
 ## Deplolyed App
-Frontend: https://
+Frontend: https://deployed-site.whatever
 
 ## Directory Structure
 Cyber-Cyclists_020
@@ -38,12 +42,13 @@ Cyber-Cyclists_020
 │  ├─ README.md
 │  ├─ style.css
 
-
 ## Video Walkthrough of the project
-Attach a very short video walkthough of all of the features [ 1 - 3 minutes ]
+Presentation video link : https://youtu.be/LOHxH6MNoQI?si=irSDEISNAHD9_gHE
 
 ## Video Walkthrough of the codebase
-Attach a very short video walkthough of codebase [ 1 - 5 minutes ]
+Questionnaires video link : 
+- https://youtu.be/tDkszMEG-L0
+- https://youtu.be/2mRYtkScyQs?si=h7kMH8SrI3qOZSKZ
 
 ## Features
 List of key features of our application are-
@@ -71,10 +76,8 @@ Provide instructions and examples on how to use your project.
  -> View or track your task with different view .sections such as graph view on DashBoard, List view and kanban view.
 ```
 
-
 ## Technology Stack
 List and provide a brief overview of the technologies used in the project.
 
 - HTML
 - CSS
-
