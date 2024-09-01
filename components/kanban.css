@@ -10,13 +10,15 @@
 
 #navbar {
     padding: 1rem 2rem;
-    background-color: #F7F7F8;
+    background: linear-gradient(to right,#215478, #257db3);
+    color: white;
     height: 12vh;
 }
 
 #burger_icon i {
     font-size: 1.5rem;
     transition: 0.5s ease;
+    display: none;
 }
 
 #burger_icon i:hover {
@@ -82,12 +84,14 @@ a:hover {
 #navbar .nav_right #search_bar div:nth-child(1) {
     padding: 0.5rem;
     background-color: white;
+    color: black;
     border-top-left-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
 }
 
 input[placeholder="Search"] {
-    border-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
     font-size: 1rem;
     padding: 0.6rem 0 0.4rem 0;
     width: 90%;
@@ -121,7 +125,8 @@ aside {
 
 #sidebar {
     overflow: auto;
-    background-color: #F5F5F5;
+    background: linear-gradient(to right,#215478, #257db3);
+    color: white;
     height: 100%;
 }
 
@@ -140,7 +145,6 @@ aside {
 
 #sidebar .sidebar_subtitle {
     font-size: 0.8rem;
-    color: rgb(54, 52, 52);
 }
 
 #sidebar #planning {
@@ -153,6 +157,7 @@ aside {
 
 #sidebar .sidebar_item {
     background-color: white;
+    color: black;
     padding: 0.8rem 1rem;
     margin: 0.5rem 0;
     transition: 0.5s ease;
@@ -456,6 +461,10 @@ th {
 @media screen and (max-width: 700px) {
     .kanban-board {
         flex-direction: column;
+    }
+
+    #burger_icon i {
+        display: block;
     }
 }
 
